@@ -8,7 +8,11 @@ public class AppAluno {
         aluno1.gerarMatricula();
         aluno2.gerarMatricula();
 
-        System.out.println("Nome: " + aluno1.getNome() + ", Matrícula: " + aluno1.getMatricula());
-        System.out.println("Nome: " + aluno2.getNome() + ", Matrícula: " + aluno2.getMatricula());
+        // System.out.println("Nome: " + aluno1.getNome() + ", Matrícula: " +
+        // aluno1.getMatricula());
+        // System.out.println("Nome: " + aluno2.getNome() + ", Matrícula: " +
+        // aluno2.getMatricula());
+        System.out.println(aluno1);
+        System.out.println(aluno2);
     }
 }
