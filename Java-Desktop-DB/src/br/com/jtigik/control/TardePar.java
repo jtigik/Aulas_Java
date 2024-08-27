@@ -10,12 +10,16 @@ public class TardePar {
 
         for (cont = 0; cont < 3; cont++) {
             num = Float.parseFloat(
-                    JOptionPane.showInputDialog(null, "Informe uma nota: "));
+                    JOptionPane.showInputDialog(null,
+                            "Informe uma nota: "));
             soma += num;
         }
         media = soma / cont;
 
-        JOptionPane.showMessageDialog(null, "A média é: %f.2" + media + ".");
+        JOptionPane.showMessageDialog(null, "A média é: " + media);
+
+        JOptionPane.showMessageDialog(null,
+                String.format("A média é: %.1f", media));
 
     }// Fim do main
 } // Fim Class
