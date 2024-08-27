@@ -39,7 +39,6 @@ public class NoiteIRPF {
                     JOptionPane.showMessageDialog(null,
                             "Com o salário de R$ " + salario + "\nA taxa é de: R$" + taxa
                                     + "\nExiste isenção do IRPF!");
-
                 }
 
             }
