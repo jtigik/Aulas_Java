@@ -3,15 +3,9 @@ package br.com.jtigik.class_and_method;
 public class ProdutoTeste {
     public static void main(String[] args) {
 
-        Produto p0 = new Produto();
-        p0.nome = "Notebook";
-        p0.preco = 4567.79;
-        p0.desconto = 0.25;
+        Produto p0 = new Produto("Notebook", 4567.79, 0.25);
 
-        var p1 = new Produto();
-        p1.desconto = 0.30;
-        p1.nome = "Disquete 3.5'' 1.44Mb";
-        p1.preco = 10.00;
+        var p1 = new Produto("Disquete 3.5'' 1.44Mb", 0.30, 10.00);
 
         var p2 = new Produto();
         p2.nome = "Caneta Preta";

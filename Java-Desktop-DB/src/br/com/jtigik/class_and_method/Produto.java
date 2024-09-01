@@ -5,4 +5,21 @@ public class Produto {
     double preco;
     double desconto;
 
+    Produto() {
+
+    }
+
+    Produto(String nomeProduto, double precoInicial, double descontoInicial) {
+        nome = nomeProduto;
+        preco = precoInicial;
+        desconto = descontoInicial;
+    }
+
+    double precoComDesconto() {
+        return preco * (1 - desconto);
+    }
+
+    double precoComDesconto(double descontoGerente) {
+        return preco * (1 - (desconto + descontoGerente));
+    }
 }
