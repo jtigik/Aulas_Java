@@ -3,16 +3,15 @@ package br.com.jtigik.class_and_method;
 public class Produto {
     String nome;
     double preco;
-    double desconto;
+    static double desconto = 0.25;
 
     Produto() {
 
     }
 
-    Produto(String nomeProduto, double precoInicial, double descontoInicial) {
+    Produto(String nomeProduto, double precoInicial) {
         nome = nomeProduto;
         preco = precoInicial;
-        desconto = descontoInicial;
     }
 
     double precoComDesconto() {
