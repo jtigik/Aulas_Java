@@ -1,4 +1,4 @@
-package br.com.jtigik.ex_arrays;
+package br.com.jtigik.exemplo_arrays;
 
 import java.util.Arrays;
 import javax.swing.JOptionPane;
