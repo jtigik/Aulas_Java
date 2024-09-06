@@ -8,7 +8,11 @@ public class EqulHash {
         u1.email = "pedro.silva@senacrs.com.br";
 
         Usuario u2 = new Usuario();
-        u2.nome = "Maria da Silva";
-        u2.email = "maria.silva@senacrs.com.br";
+        u2.nome = "Pedro da Silva";
+        u2.email = "pedro.silva@senacrs.com.br";
+
+        System.out.println(u1 == u2);
+        System.out.println(u1.equals(u2));
+        System.out.println(u2.equals(u1));
     }
 }

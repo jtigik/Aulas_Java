@@ -6,11 +6,18 @@ public class Usuario {
     String email;
 
     public boolean equals(Object obj) {
-        Usuario outro = (Usuario) obj;
+        if (obj instanceof Usuario outro) {
 
-        boolean nomeIgual = outro.nome.equals(this.nome);
-        boolean emailIgual = outro.email.equals(this.email);
+            boolean nomeIgual = outro.nome.equals(this.nome);
+            boolean emailIgual = outro.email.equals(this.email);
+
+            return nomeIgual && emailIgual;
+        } else {
+            return false;
+        }
     }
-    return nomeIgual && emailIgual ;
-}
+
+    public int hashCode() {
+        return 0;
+    }
 }
