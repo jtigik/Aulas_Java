@@ -1,4 +1,4 @@
-package br.com.jtigik.class_and_method;
+/* package br.com.jtigik.class_and_method;
 
 public class MatrizDiagonalExe {
 
@@ -16,3 +16,4 @@ public class MatrizDiagonalExe {
         MatrixDiagonal();
     }
 }
+ */
