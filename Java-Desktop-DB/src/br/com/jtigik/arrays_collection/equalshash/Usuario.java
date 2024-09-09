@@ -5,6 +5,7 @@ public class Usuario {
     String nome;
     String email;
 
+    @Override
     public boolean equals(Object obj) {
         if (obj instanceof Usuario outro) {
 
@@ -17,6 +18,7 @@ public class Usuario {
         }
     }
 
+    @Override
     public int hashCode() {
         return 0;
     }

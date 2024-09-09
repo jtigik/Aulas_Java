@@ -1,4 +1,4 @@
-package br.com.jtigik.arrays_collection;
+package br.com.jtigik.arrays_collection.sets;
 
 import java.util.SortedSet;
 import java.util.TreeSet;
@@ -7,7 +7,7 @@ public class ConjuntoHomogenio {
 
     public static void main(String[] args) {
 
-        // Set<String> listaAprovados = new HashSet<>()
+        // Set<String> listaAprovados = new HashSet<>();
         SortedSet<String> listaAprovados = new TreeSet<>();
 
         listaAprovados.add("Ana");

@@ -1,4 +1,4 @@
-package br.com.jtigik.arrays_collection;
+package br.com.jtigik.arrays_collection.sets;
 
 import java.util.HashSet;
 
