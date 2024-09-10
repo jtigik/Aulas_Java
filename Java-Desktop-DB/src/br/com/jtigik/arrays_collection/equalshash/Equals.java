@@ -1,6 +1,6 @@
 package br.com.jtigik.arrays_collection.equalshash;
 
-public class EqulHash {
+public class Equals {
 
     public static void main(String[] args) {
         Usuario u1 = new Usuario();

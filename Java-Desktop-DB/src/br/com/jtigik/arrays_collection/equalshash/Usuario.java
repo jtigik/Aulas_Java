@@ -5,6 +5,14 @@ public class Usuario {
     String nome;
     String email;
 
+    Usuario() {
+
+    }
+
+    public Usuario(String nome) {
+        this.nome = nome;
+    }
+
     @Override
     public int hashCode() {
         final int prime = 31;
