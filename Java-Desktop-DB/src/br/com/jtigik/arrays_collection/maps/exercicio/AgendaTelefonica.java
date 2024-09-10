@@ -1,4 +1,4 @@
-package br.com.jtigik.arrays_collection.maps;
+package br.com.jtigik.arrays_collection.maps.exercicio;
 
 import java.util.HashMap;
 import java.util.Map;
