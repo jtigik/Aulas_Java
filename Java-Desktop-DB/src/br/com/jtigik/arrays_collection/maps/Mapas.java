@@ -31,13 +31,13 @@ public class Mapas {
             System.out.println(chave);
         }
 
-        for (var valor : usuarios.values()) {
-            System.out.println(valor);
-        }
-
         for (Entry<Integer, String> registro : usuarios.entrySet()) {
             System.out.print(registro.getKey() + " - ");
             System.out.println(registro.getValue());
+        }
+
+        for (var valor : usuarios.values()) {
+            System.out.println(valor);
         }
     }
 
