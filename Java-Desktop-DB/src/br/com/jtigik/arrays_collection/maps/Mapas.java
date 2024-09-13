@@ -14,6 +14,10 @@ public class Mapas {
         usuarios.put(19, "Antonio");
         usuarios.put(22, "Mary");
         usuarios.put(5, "Ginger");
+        usuarios.put(17, "Ricardo");
+        usuarios.put(119, "Antonio");
+        usuarios.put(122, "Mary");
+        usuarios.put(15, "Ginger");
 
         System.out.println(usuarios.size());
         System.out.println(usuarios.isEmpty());
