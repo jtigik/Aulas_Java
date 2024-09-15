@@ -6,6 +6,7 @@ public class Heroi extends Jogador {
     Herança: Compartilha os mesmos atributos
     e comportamentos da Classe Jogador.
      */
+ /* 
     @Override
     boolean atacar(Jogador oponente) {
 
@@ -13,11 +14,12 @@ public class Heroi extends Jogador {
         Verificando a distância entre os jogadores.
         método abs() nao diferencia numeros
         positivos dos negativos
-         */
+        
         int deltaX = Math.abs(x - oponente.x);
         int deltaY = Math.abs(y - oponente.y);
 
-        // Verifica se os jogadores estão lada-a-lado
+        Verifica se os jogadores estão lada-a-lado*/
+ /*
         if (deltaX == 0 && deltaY == 1) {
             oponente.vida -= 20;
             return true;
@@ -26,5 +28,14 @@ public class Heroi extends Jogador {
             return true;
         }
         return false;
+    }
+     */
+    @Override
+    boolean atacar(Jogador oponente) {
+        boolean ataque_1 = super.atacar(oponente);
+        boolean ataque_2 = super.atacar(oponente);
+        boolean ataque_3 = super.atacar(oponente);
+
+        return ataque_1 || ataque_2 || ataque_3;
     }
 }

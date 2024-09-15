@@ -13,18 +13,20 @@ public class Jogo {
         heroi.x = 10;
         heroi.y = 11;//Para que não fiquem na mesma posiçao
 
-        System.out.println(monstro.vida);
-        System.out.println(heroi.vida);
+        System.out.println("Monstro tem --> " + monstro.vida);
+        System.out.println("Heroi tem --> " + heroi.vida);
 
         monstro.atacar(heroi);
         heroi.atacar(monstro);
         monstro.atacar(heroi);
+        monstro.andar(Direcao.NORTE);
         heroi.atacar(monstro);
         monstro.atacar(heroi);
+        heroi.andar(Direcao.NORTE);
         heroi.atacar(monstro);
 
-        System.out.println(heroi.vida);
-        System.out.println(monstro.vida);
+        System.out.println("Monstro tem --> " + monstro.vida);
+        System.out.println("Heroi tem --> " + heroi.vida);
 
     }
 }
