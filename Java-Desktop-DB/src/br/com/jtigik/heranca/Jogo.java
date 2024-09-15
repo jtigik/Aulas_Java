@@ -18,9 +18,13 @@ public class Jogo {
 
         monstro.atacar(heroi);
         heroi.atacar(monstro);
+        monstro.atacar(heroi);
+        heroi.atacar(monstro);
+        monstro.atacar(heroi);
+        heroi.atacar(monstro);
 
-        System.out.println(monstro.vida);
         System.out.println(heroi.vida);
+        System.out.println(monstro.vida);
 
     }
 }
