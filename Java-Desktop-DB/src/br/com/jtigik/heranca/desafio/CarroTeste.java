@@ -17,14 +17,16 @@ public class CarroTeste {
 
         LaFerrari c2 = new LaFerrari();
         c2.acelerar();
-        System.out.println(c2);
+        System.out.println("A-La Ferrari -->" + c2);
 
         c2.acelerar();
+        System.out.println("A-La Ferrari -->" + c2);
         c2.frear();
-        System.out.println(c2);
+        System.out.println("F-La Ferrari -->" + c2);
         c2.acelerar();
+        System.out.println("A-La Ferrari -->" + c2);
         c2.frear();
-        System.out.println(c2);
+        System.out.println("F-La Ferrari -->" + c2);
 
     }
 }
