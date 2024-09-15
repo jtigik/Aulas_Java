@@ -6,5 +6,5 @@ public class Civic extends Carro {
         super(210);
     }
 
-//Recebe todos atributos e métodos de Carr().
+//Recebe todos atributos e métodos de Carro().
 }

@@ -2,7 +2,7 @@ package br.com.jtigik.heranca.desafio;
 
 public class LaFerrari extends Carro {
 
-    LaFerrari() {
+    public LaFerrari() {
         super(310);
     }
 
