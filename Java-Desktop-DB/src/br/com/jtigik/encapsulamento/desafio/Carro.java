@@ -2,9 +2,9 @@ package br.com.jtigik.encapsulamento.desafio;
 
 public class Carro {
 
-    final int VELOCIDADE_MAXIMA;
-    int velocidadeAtual = 305;
-    int delta = 0;
+    public final int VELOCIDADE_MAXIMA;
+    protected int velocidadeAtual = 305;
+    protected int delta = 0;
 
     protected Carro(int velocidadeMaxima) {
         this.VELOCIDADE_MAXIMA = velocidadeMaxima;
