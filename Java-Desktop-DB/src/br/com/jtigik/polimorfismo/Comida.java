@@ -12,7 +12,7 @@ public class Comida {
         return peso;
     }
 
-    public void setPeso(double peso) {
+    public final void setPeso(double peso) {
         if (peso >= 0) {
             this.peso = peso;
         }
