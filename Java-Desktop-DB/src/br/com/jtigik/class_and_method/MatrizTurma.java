@@ -32,6 +32,7 @@ public class MatrizTurma {
                     totalTurma += nota;
                 }
             }
+
             double media = totalTurma / (qtdAluno * qtdNota);
 
             JOptionPane.showMessageDialog(null, String.format(

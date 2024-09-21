@@ -1,4 +1,4 @@
-package br.com.jtigik.control;
+package br.com.jtigik.excecao;
 
 import java.util.Random;
 
