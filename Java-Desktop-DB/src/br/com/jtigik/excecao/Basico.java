@@ -5,6 +5,8 @@ public class Basico {
     public static void main(String[] args) {
         Aluno aluno = null;
 
+        clearScreen();
+
         try {
             imprimirAluno(aluno);
         } catch (Exception e) {
@@ -21,5 +23,10 @@ public class Basico {
 
     public static void imprimirAluno(Aluno aluno) {
         System.out.println(aluno.getNome());
+    }
+
+    public static void clearScreen() {
+        System.out.print("\033[H\033[2J");
+        System.out.flush();
     }
 }
