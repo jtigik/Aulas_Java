@@ -4,9 +4,9 @@ import java.util.Random;
 
 public class Aluno {
 
-    private final String nome;
-    private String matricula;
-    private static final int CONT_MAT = 1000; // Contador para gerar matrículas únicas
+    public final String nome;
+    public String matricula;
+    public static final int CONT_MAT = 1000; // Contador para gerar matrículas únicas
 
     // Construtor que recebe o nome como parâmetro e inicializa a matrícula com um
     // valor padrão
