@@ -6,6 +6,7 @@ public class Aluno {
 
     public final String nome;
     public String matricula;
+    public double nota;
     public static final int CONT_MAT = 1000; // Contador para gerar matrículas únicas
 
     // Construtor que recebe o nome como parâmetro e inicializa a matrícula com um
@@ -28,6 +29,18 @@ public class Aluno {
 
     public String getMatricula() {
         return matricula;
+    }
+
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
+    }
+
+    public double getNota() {
+        return nota;
+    }
+
+    public void setNota(double nota) {
+        this.nota = nota;
     }
 
     @Override
