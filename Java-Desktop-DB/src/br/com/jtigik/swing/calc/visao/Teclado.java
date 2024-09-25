@@ -9,6 +9,8 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
+import br.com.jtigik.swing.calc.modelo.Memoria;
+
 public class Teclado extends JPanel implements ActionListener {
 
     private final Color COR_CINZA_ESCURO = new Color(68, 68, 68);
@@ -72,7 +74,10 @@ public class Teclado extends JPanel implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() instanceof JButton botao) {
-            System.out.println(botao.getText());
+            //Sempre que um novo botão for pressionado,
+            //enviar o Label do Botão para ser processado.
+
+            Memoria.getInstancia().processarComando(botao.getText());
         }
     }
 
