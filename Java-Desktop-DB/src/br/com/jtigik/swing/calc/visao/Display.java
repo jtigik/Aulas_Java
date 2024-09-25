@@ -1,5 +1,6 @@
 package br.com.jtigik.swing.calc.visao;
 
+import br.com.jtigik.swing.calc.modelo.Memoria;
 import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.Font;
@@ -12,7 +13,7 @@ public class Display extends JPanel {
 
     public Display() {
         setBackground(new Color(46, 49, 50));
-        label = new JLabel("12345,67");
+        label = new JLabel(Memoria.getInstancia().getTextoAtual());
         label.setForeground(Color.WHITE);
         label.setFont(new Font("consolas", Font.PLAIN, 30));
 
