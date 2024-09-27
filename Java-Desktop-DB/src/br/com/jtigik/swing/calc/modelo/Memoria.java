@@ -59,8 +59,20 @@ public class Memoria {
             Integer.valueOf(texto);
             return TipoComando.NUMERO;
         } catch (NumberFormatException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+            //Quando não for número, processar...
+            if ("AC".equals(texto)) {
+                return TipoComando.ZERAR;
+            } else if ("/".equals(texto)) {
+                return TipoComando.DIV;
+            } else if ("*".equals(texto)) {
+                return TipoComando.MULT;
+            } else if ("+".equals(texto)) {
+                return TipoComando.SOMA;
+            } else if ("-".equals(texto)) {
+                return TipoComando.SUB;
+            } else if ("/".equals(texto)) {
+                return TipoComando.DIV;
+            }
         }
         return null;
     }
