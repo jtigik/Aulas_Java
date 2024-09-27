@@ -40,6 +40,7 @@ public class Memoria {
     public void processarComando(String texto) {
 
         TipoComando tipoComando = detectarTipoComando(texto);
+        //Linha provisória, apenas para testar o retorno do método.
 
         if ("AC".equals(texto)) {
             textoAtual = "";
@@ -70,8 +71,10 @@ public class Memoria {
                 return TipoComando.SOMA;
             } else if ("-".equals(texto)) {
                 return TipoComando.SUB;
-            } else if ("/".equals(texto)) {
-                return TipoComando.DIV;
+            } else if ("=".equals(texto)) {
+                return TipoComando.IGUAL;
+            } else if (",".equals(texto)) {
+                return TipoComando.VIRGULA;
             }
         }
         return null;
