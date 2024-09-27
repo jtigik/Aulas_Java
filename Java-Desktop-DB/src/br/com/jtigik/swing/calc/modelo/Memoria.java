@@ -12,6 +12,10 @@ public class Memoria {
     * Assim é possível controlar a criação dentro da
     * própria Classe.
      */
+    private enum TipoComando {
+        ZERAR, NUMERO, DIV, MULT, SUB, SOMA, IGUAL, VIRGULA;
+    };
+
     private static final Memoria instancia = new Memoria();
 
     private String textoAtual = "";
