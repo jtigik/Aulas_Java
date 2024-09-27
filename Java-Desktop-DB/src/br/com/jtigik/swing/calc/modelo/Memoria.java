@@ -18,8 +18,11 @@ public class Memoria {
 
     private static final Memoria instancia = new Memoria();
 
-    private String textoAtual = "";
+    private TipoComando ultimaOperacao = null;
+    private boolean substituir = false;
+    private String textoBuffer = "";
 
+    private String textoAtual = "";
     private final List<MemoriaObservador> observadores = new ArrayList<>();
 
     private Memoria() {
@@ -64,22 +67,27 @@ public class Memoria {
             if (null != texto) //Quando não for número, processar...
             {
                 switch (texto) {
-                    case "AC":
+                    case "AC" -> {
                         return TipoComando.ZERAR;
-                    case "/":
+                    }
+                    case "/" -> {
                         return TipoComando.DIV;
-                    case "*":
+                    }
+                    case "*" -> {
                         return TipoComando.MULT;
-                    case "+":
+                    }
+                    case "+" -> {
                         return TipoComando.SOMA;
-                    case "-":
+                    }
+                    case "-" -> {
                         return TipoComando.SUB;
-                    case "=":
+                    }
+                    case "=" -> {
                         return TipoComando.IGUAL;
-                    case ",":
+                    }
+                    case "," -> {
                         return TipoComando.VIRGULA;
-                    default:
-                        break;
+                    }
                 }
             }
         }
