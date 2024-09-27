@@ -12,7 +12,7 @@ public class Memoria {
     * Assim é possível controlar a criação dentro da
     * própria Classe.
      */
-    private enum TipoComando {
+    private static enum TipoComando {
         ZERAR, NUMERO, DIV, MULT, SUB, SOMA, IGUAL, VIRGULA;
     };
 
@@ -21,7 +21,6 @@ public class Memoria {
     private String textoAtual = "";
 
     private final List<MemoriaObservador> observadores = new ArrayList<>();
-    // ArrayList para armazenar todos os observadores.
 
     private Memoria() {
     }
@@ -38,23 +37,31 @@ public class Memoria {
         return textoAtual.isEmpty() ? "0" : textoAtual;
     }
 
-    public void processarComando(String valor) {
+    public void processarComando(String texto) {
 
-        //Tratando valor quando 'AC' for pressionado.
-        if ("AC".equals(valor)) {
+        TipoComando tipoComando = detectarTipoComando(texto);
+
+        if ("AC".equals(texto)) {
             textoAtual = "";
         } else {
-            textoAtual += valor;
+            textoAtual += texto;
         }
 
-        // Para cada novo comando (botão pressionado)
-        // captura o valor do Buttom e adiciona ao texto atual
         observadores.forEach(o -> o.valorAlterado(getTextoAtual()));
-        // e notifica todos os observadores sobre a atualização.
+
     }
 
-    /*
-     * Não basta implementar a Interface, é preciso se registrar dentro da Classe Memória.
-     * Por isso, Classe Memória deve possuir um método que grava todos os Observadores.
-     */
+    private TipoComando detectarTipoComando(String texto) {
+        if (textoAtual.isEmpty() && texto.equals("0")) {
+            return null;
+        }
+        try {
+            Integer.valueOf(texto);
+            return TipoComando.NUMERO;
+        } catch (NumberFormatException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        return null;
+    }
 }
