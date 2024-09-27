@@ -44,7 +44,7 @@ public class Memoria {
 
         TipoComando tipoComando = detectarTipoComando(texto);
 
-        if (tipoComando == null) {
+        /* if (tipoComando == null) {
             return;
         } else if (tipoComando == TipoComando.ZERAR) {
             textoAtual = "";
@@ -59,6 +59,28 @@ public class Memoria {
             textoAtual = obterResulatdoOperacao();
             textoBuffer = textoAtual;
             ultimaOperacao = tipoComando;
+        } */
+        if (null == tipoComando) {
+            return;
+        } else {
+            switch (tipoComando) {
+                case ZERAR -> {
+                    textoAtual = "";
+                    textoBuffer = "";
+                    substituir = false;
+                    ultimaOperacao = null;
+                }
+                case NUMERO, VIRGULA -> {
+                    textoAtual = substituir ? texto : textoAtual + texto;
+                    substituir = false;
+                }
+                default -> {
+                    substituir = true;
+                    textoAtual = obterResulatdoOperacao();
+                    textoBuffer = textoAtual;
+                    ultimaOperacao = tipoComando;
+                }
+            }
         }
 
         observadores.forEach(o -> o.valorAlterado(getTextoAtual()));
@@ -66,7 +88,43 @@ public class Memoria {
     }
 
     private String obterResulatdoOperacao() {
-        return textoAtual;
+        if (ultimaOperacao == null) {
+            return textoAtual;
+        }
+        double numeroBuffer = Double.parseDouble(textoBuffer.replace(",", "."));
+        double numeroAtual = Double.parseDouble(textoAtual.replace(",", "."));
+
+        double resultado = 0;
+
+        /* if (ultimaOperacao == TipoComando.SOMA) {
+        resultado = numeroBuffer + numeroAtual;
+        } else if (ultimaOperacao == TipoComando.SUB) {
+        resultado = numeroBuffer - numeroAtual;
+        } else if (ultimaOperacao == TipoComando.MULT) {
+        resultado = numeroBuffer * numeroAtual;
+        } else if (ultimaOperacao == TipoComando.DIV) {
+        resultado = numeroBuffer / numeroAtual;
+        } */
+        if (null != ultimaOperacao) {
+            switch (ultimaOperacao) {
+                case SOMA ->
+                    resultado = numeroBuffer + numeroAtual;
+                case SUB ->
+                    resultado = numeroBuffer - numeroAtual;
+                case MULT ->
+                    resultado = numeroBuffer * numeroAtual;
+                case DIV ->
+                    resultado = numeroBuffer / numeroAtual;
+                default -> {
+                }
+            }
+        }
+
+        String resultadoString = Double.toString(resultado).replace(".", ",");
+
+        boolean inteiro = resultadoString.endsWith(",0");
+
+        return inteiro ? resultadoString.replace(",0", "") : resultadoString;
     }
 
     private TipoComando detectarTipoComando(String texto) {
