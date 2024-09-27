@@ -43,17 +43,30 @@ public class Memoria {
     public void processarComando(String texto) {
 
         TipoComando tipoComando = detectarTipoComando(texto);
-        //Linha provisória, apenas para testar o retorno do método.
-        System.out.println(tipoComando);
 
-        if ("AC".equals(texto)) {
+        if (tipoComando == null) {
+            return;
+        } else if (tipoComando == TipoComando.ZERAR) {
             textoAtual = "";
+            textoBuffer = "";
+            substituir = false;
+            ultimaOperacao = null;
+        } else if (tipoComando == TipoComando.NUMERO || tipoComando == TipoComando.VIRGULA) {
+            textoAtual = substituir ? texto : textoAtual + texto;
+            substituir = false;
         } else {
-            textoAtual += texto;
+            substituir = true;
+            textoAtual = obterResulatdoOperacao();
+            textoBuffer = textoAtual;
+            ultimaOperacao = tipoComando;
         }
 
         observadores.forEach(o -> o.valorAlterado(getTextoAtual()));
 
+    }
+
+    private String obterResulatdoOperacao() {
+        return textoAtual;
     }
 
     private TipoComando detectarTipoComando(String texto) {
@@ -64,33 +77,24 @@ public class Memoria {
             Integer.valueOf(texto);
             return TipoComando.NUMERO;
         } catch (NumberFormatException e) {
-            if (null != texto) //Quando não for número, processar...
-            {
-                switch (texto) {
-                    case "AC" -> {
-                        return TipoComando.ZERAR;
-                    }
-                    case "/" -> {
-                        return TipoComando.DIV;
-                    }
-                    case "*" -> {
-                        return TipoComando.MULT;
-                    }
-                    case "+" -> {
-                        return TipoComando.SOMA;
-                    }
-                    case "-" -> {
-                        return TipoComando.SUB;
-                    }
-                    case "=" -> {
-                        return TipoComando.IGUAL;
-                    }
-                    case "," -> {
-                        return TipoComando.VIRGULA;
-                    }
+            if (null != texto) {//Quando não for número, processar...
+                if ("AC".equals(texto)) {
+                    return TipoComando.ZERAR;
+                } else if ("/".equals(texto)) {
+                    return TipoComando.DIV;
+                } else if ("*".equals(texto)) {
+                    return TipoComando.MULT;
+                } else if ("+".equals(texto)) {
+                    return TipoComando.SOMA;
+                } else if ("-".equals(texto)) {
+                    return TipoComando.SUB;
+                } else if ("=".equals(texto)) {
+                    return TipoComando.IGUAL;
+                } else if (",".equals(texto) && !textoAtual.contains(",")) {
+                    return TipoComando.VIRGULA;
                 }
             }
+            return null;
         }
-        return null;
     }
 }
