@@ -88,7 +88,7 @@ public class Memoria {
     }
 
     private String obterResulatdoOperacao() {
-        if (ultimaOperacao == null) {
+        if (ultimaOperacao == null || ultimaOperacao == TipoComando.IGUAL) {
             return textoAtual;
         }
         double numeroBuffer = Double.parseDouble(textoBuffer.replace(",", "."));
