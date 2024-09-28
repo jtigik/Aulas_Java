@@ -13,7 +13,7 @@ public class Memoria {
     * própria Classe.
      */
     private static enum TipoComando {
-        ZERAR, NUMERO, DIV, MULT, SUB, SOMA, IGUAL, VIRGULA;
+        SINAL, ZERAR, NUMERO, DIV, MULT, SUB, SOMA, IGUAL, VIRGULA;
     };
 
     private static final Memoria instancia = new Memoria();
@@ -74,6 +74,12 @@ public class Memoria {
                     textoAtual = substituir ? texto : textoAtual + texto;
                     substituir = false;
                 }
+                case SINAL -> {
+                    textoAtual
+                            = textoAtual.contains("-")
+                            ? textoAtual.substring(1)
+                            : "-" + textoAtual;
+                }
                 default -> {
                     substituir = true;
                     textoAtual = obterResulatdoOperacao();
@@ -115,6 +121,8 @@ public class Memoria {
                     resultado = numeroBuffer * numeroAtual;
                 case DIV ->
                     resultado = numeroBuffer / numeroAtual;
+                // case SINAL ->
+                //     resultado;
                 default -> {
                 }
             }
@@ -138,9 +146,9 @@ public class Memoria {
             if (null != texto) {//Quando não for número, processar...
                 if ("AC".equals(texto)) {
                     return TipoComando.ZERAR;
-                } else if ("/".equals(texto)) {
+                } else if ("÷".equals(texto)) {
                     return TipoComando.DIV;
-                } else if ("*".equals(texto)) {
+                } else if ("×".equals(texto)) {
                     return TipoComando.MULT;
                 } else if ("+".equals(texto)) {
                     return TipoComando.SOMA;
@@ -148,6 +156,8 @@ public class Memoria {
                     return TipoComando.SUB;
                 } else if ("=".equals(texto)) {
                     return TipoComando.IGUAL;
+                } else if ("±".equals(texto)) {
+                    return TipoComando.SINAL;
                 } else if (",".equals(texto) && !textoAtual.contains(",")) {
                     return TipoComando.VIRGULA;
                 }
