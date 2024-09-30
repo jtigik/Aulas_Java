@@ -1,5 +1,7 @@
 {
     "java.project.sourcePaths": [
+        "src/br/com/jtigik/swing/JDBC",
+        "lib",
         "src"
     ],
     "java.project.outputPath": "bin",

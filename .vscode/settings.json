@@ -2,5 +2,13 @@
     "emmet.preferences": {},
     "cSpell.words": [
         "heranca"
+    ],
+    "java.project.sourcePaths": [
+        "Java-Desktop-DB\\bin",
+        "Java-Desktop-DB\\lib",
+        "Java-Desktop-DB\\src"
+    ],
+    "java.project.referencedLibraries": [
+        "Java-Desktop-DB\\lib\\mysql-connector-j-9.0.0.jar"
     ]
 }
