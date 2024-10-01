@@ -70,12 +70,18 @@ public class Teclado extends JPanel implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource() instanceof JButton botao) {
+        /* if (e.getSource() instanceof JButton botao) {
             //Sempre que um novo botão for pressionado,
             //enviar o Label do Botão para ser processado.
 
             Memoria.getInstancia().processarComando(botao.getText());
+        } */
+
+        if (e.getSource() instanceof JButton) {
+            JButton botao = (JButton) e.getSource();
+            Memoria.getInstancia().processarComando(botao.getText());
         }
+
     }
 
 }
