@@ -26,7 +26,7 @@ public class ConsultarPessoa1 {
 
             pessoas.add(new Pessoa(codigo, nome));
         }
-
+        //Estrutura provisória, apenas para verificar o retorno;
         for (Pessoa p : pessoas) {
             System.out.println(p.getCodigo() + "--> " + p.getNome());
         }
