@@ -26,9 +26,15 @@ public class AlterarNomePessoa {
         if (res.next()) {
             Pessoa p = new Pessoa(res.getInt(1), res.getString(2));
             System.out.println("O nome atual é: " + p.getNome());
-        }
 
-        conexao.close();
-        entrada.close();
+            System.out.println("Informe outro número: ");
+            String novoNome = entrada.nextLine();
+
+            sql = "UPDATE pessoa SET nome = ? WHERE";
+            entrada.close();
+            stmt.close();
+            stmt = conexao.prepareStatement(sql);
+
+        }
     }
 }
