@@ -14,7 +14,7 @@ public class AlterarNomePessoa {
         System.out.print("Informe o código da pessoa: ");
         int codigo = entrada.nextInt();
 
-        String select = "SELECT codigo, nome FROM pessoa WHERE CÓDIGO = ?";
+        String select = "SELECT codigo, nome FROM pessoa WHERE CODIGO = ?";
 
         Connection conexao = FabricaDeConexao.getConexao();
         PreparedStatement stmt = conexao.prepareStatement(select);
@@ -26,7 +26,10 @@ public class AlterarNomePessoa {
                     resultado.getInt(1),
                     resultado.getString(2));
 
-            System.out.printf("O nome atual é: %s", p.getNome());
+            System.out.printf("O nome atual é: %s\n\n", p.getNome());
+
+            entrada.nextLine();
+
             System.out.print("Informe o novo Nome: ");
             String novoNome = entrada.nextLine();
 
@@ -37,8 +40,11 @@ public class AlterarNomePessoa {
             stmt.setString(1, novoNome);
             stmt.setInt(2, codigo);
 
-            System.out.println("Pessoa alterada com sucesso!");
+            stmt.execute();
 
+            System.out.println("Pessoa alterada com sucesso!");
+        } else {
+            System.out.println("Registro não encontrado!");
         }
 
         conexao.close();
