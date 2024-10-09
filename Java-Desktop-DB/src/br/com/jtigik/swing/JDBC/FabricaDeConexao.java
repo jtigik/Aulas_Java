@@ -10,10 +10,10 @@ public class FabricaDeConexao {
 
     public static Connection getConexao() {
         try {
-            Properties prop = getProperties();
-            final String url = prop.getProperty("banco.url");
-            final String usuario = prop.getProperty("banco.usuario");
-            final String senha = prop.getProperty("banco.senha");
+            Properties propertie = getProperties();
+            final String url = propertie.getProperty("banco.url");
+            final String usuario = propertie.getProperty("banco.usuario");
+            final String senha = propertie.getProperty("banco.senha");
 
             return DriverManager.getConnection(url, usuario, senha);
         } catch (SQLException | IOException e) {
@@ -22,10 +22,10 @@ public class FabricaDeConexao {
     }
 
     private static Properties getProperties() throws IOException {
-        Properties prop = new Properties();
+        Properties propertie = new Properties();
         String caminho = "/conexao.properties";
 
-        prop.load(FabricaDeConexao.class.getResourceAsStream(caminho));
-        return prop;
+        propertie.load(FabricaDeConexao.class.getResourceAsStream(caminho));
+        return propertie;
     }
 }

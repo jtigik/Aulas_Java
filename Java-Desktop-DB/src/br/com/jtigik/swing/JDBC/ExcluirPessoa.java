@@ -20,14 +20,14 @@ public class ExcluirPessoa {
         PreparedStatement stmt = conexao.prepareStatement(sql);
         stmt.setInt(1, codigo);
 
-        /* if(stmt.executeUpdate() > 0){
+        if (stmt.executeUpdate() > 0) {
             System.out.println("Registro excluido com sucesso!");
-        }else{
+        } else {
             System.out.println("Houve um erro, nada foi alterado!");
-        } */
+        }
 
         System.out.println(stmt.executeUpdate() > 0 ? "Registro excluido com sucesso!" : "Houve um erro, nada foi alterado!");
-        
+
         conexao.close();
         entrada.close();
 
