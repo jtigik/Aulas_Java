@@ -22,16 +22,15 @@ public class NovaPessoa {
 
         Connection conexao = FabricaDeConexao.getConexao();
 
-        // String sql = "INSERT INTO pessoa (nome) values (?)";
         String sql = "INSERT INTO pessoa (nome, idade, cpf) values (?, ?, ?)";
 
         PreparedStatement stmt = conexao.prepareStatement(sql);
         stmt.setString(1, nome);
-        // stmt.execute();
+
         stmt.setInt(2, idade);
-        // stmt.execute();
+
         stmt.setString(3, cpf);
-        // stmt.executeUpdate();
+
         stmt.execute();
 
         System.out.println("Pessoa cadastrada com sucesso!");
