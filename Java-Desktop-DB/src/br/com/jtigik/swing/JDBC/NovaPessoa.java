@@ -31,7 +31,8 @@ public class NovaPessoa {
         stmt.setInt(2, idade);
         // stmt.execute();
         stmt.setString(3, cpf);
-        stmt.executeUpdate();
+        // stmt.executeUpdate();
+        stmt.execute();
 
         System.out.println("Pessoa cadastrada com sucesso!");
 
