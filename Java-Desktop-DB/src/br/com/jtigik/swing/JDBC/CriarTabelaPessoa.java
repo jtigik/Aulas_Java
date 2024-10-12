@@ -10,7 +10,9 @@ public class CriarTabelaPessoa {
         Connection conexao = FabricaDeConexao.getConexao();
         String sql = " CREATE TABLE IF NOT EXISTS pessoa ("
                 + "codigo INT AUTO_INCREMENT PRIMARY KEY,"
-                + "nome VARCHAR(80) NOT NULL"
+                + "nome VARCHAR(80) NOT NULL,"
+                + "idade INT,"
+                + "cpf VARCHAR(15)"
                 + ") ";
         Statement stmt = conexao.createStatement();
         stmt.execute(sql);

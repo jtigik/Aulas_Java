@@ -13,14 +13,25 @@ public class NovaPessoa {
         System.out.print("Informe o Nome da pessoa: ");
         String nome = entrada.nextLine();
 
+        System.out.print("Informe a idade da pessoa: ");
+        int idade = entrada.nextInt();
+
+        System.out.print("Informe o CPF da pessoa: ");
+        entrada.nextLine();
+        String cpf = entrada.nextLine();
+
         Connection conexao = FabricaDeConexao.getConexao();
 
-        String sql = "INSERT INTO pessoa (nome) values (?)";
+        // String sql = "INSERT INTO pessoa (nome) values (?)";
+        String sql = "INSERT INTO pessoa (nome, idade, cpf) values (?, ?, ?)";
 
         PreparedStatement stmt = conexao.prepareStatement(sql);
         stmt.setString(1, nome);
-
-        stmt.execute();
+        // stmt.execute();
+        stmt.setInt(2, idade);
+        // stmt.execute();
+        stmt.setString(3, cpf);
+        stmt.executeUpdate();
 
         System.out.println("Pessoa cadastrada com sucesso!");
 
