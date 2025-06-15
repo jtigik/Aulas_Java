@@ -24,6 +24,11 @@ public class Jogo {
         monstro.atacar(heroi);
         heroi.andar(Direcao.NORTE);
         heroi.atacar(monstro);
+        monstro.andar(Direcao.NORTE);
+        heroi.atacar(monstro);
+        monstro.atacar(heroi);
+        heroi.andar(Direcao.NORTE);
+        heroi.atacar(monstro);
 
         System.out.println("Monstro tem --> " + monstro.vida);
         System.out.println("Heroi tem --> " + heroi.vida);
