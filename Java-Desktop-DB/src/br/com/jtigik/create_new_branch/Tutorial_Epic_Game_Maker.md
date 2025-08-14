@@ -100,7 +100,7 @@ Este tutorial ensina como instalar e jogar o **Epic Game Maker** no celular ou t
 - *Como obter*: Entre em um nível simples, jogue um pouco e tire uma captura de tela.
 - *Para a criança*: "Use o dedo aqui para andar e aqui para pular. Vamos tentar!"
 
-![Imagem 7](./images/Print_11.png)
+![Imagem 7](./images/Print_10.png)
 
 **Para os pais**: Ajude a criança a praticar os controles.
 
@@ -108,13 +108,11 @@ Este tutorial ensina como instalar e jogar o **Epic Game Maker** no celular ou t
 1. Tente chegar ao final do nível sem cair.
 2. Se for difícil, volte ao menu e escolha outro nível.
 
-**Imagem 8**: Tela de um nível colorido com o personagem pulando ou coletando uma moeda.
+**Imagem 8**: Tela de um nível colorido com o personagem pulando ou coletando um item.
 - *Como obter*: Jogue um nível fácil e tire uma captura de tela.
 - *Para a criança*: "Se não der certo, tudo bem! Vamos tentar outro jogo legal."
 
-![Imagem 8](#)
-
----
+![Imagem 7](./images/Print_11.png)
 
 ## Parte 3: Como Criar um Jogo no Epic Game Maker
 
