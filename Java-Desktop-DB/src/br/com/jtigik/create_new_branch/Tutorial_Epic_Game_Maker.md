@@ -20,7 +20,7 @@ Este tutorial ensina como instalar e jogar o **Epic Game Maker** no celular ou t
 - *Como obter*: Abra o Chrome, digite o endereço e tire uma captura de tela (pressione **Power + Volume Down**).
 - *Para a criança*: "Olha, essa é a tela onde escrevemos o endereço do jogo!"
 
-![Imagem 1](..\images\Print_01.png)
+![Imagem 1](./images/Print_01.png)
 
 **Para os pais**: Use o site oficial da Uptodown para segurança.
 
