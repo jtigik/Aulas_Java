@@ -14,8 +14,6 @@ Epic Game Maker é um app grátis no celular. Você cria mundos 2D com blocos, p
 
 ![Imagem 1](./images/Print_021.png)
 
-**Imagem sugerida:** Uma tela do jogo com blocos coloridos e um personagem pulando. (Placeholder: [Imagem de blocos e personagem]. Se você quiser que eu gere imagens personalizadas para esta cartilha, por favor confirme para prosseguir com a criação visual.)
-
 **Exercício 1:** 
 - Baixe o app na loja Google Play.
 - Abra o app.
@@ -33,8 +31,6 @@ Passos:
 5. Use o lado direito para pular e atacar.
 
 ![Imagem 2](./images/Print_022.png)
-
-**Imagem sugerida:** Captura de tela mostrando os controles: seta esquerda/direita, botão de pulo e ataque. (Placeholder: [Imagem dos controles no celular]. Confirme se deseja geração de imagens.)
 
 **Exercício 2:**
 - Jogue um nível simples.
@@ -54,7 +50,13 @@ Passos:
 
 ![Imagem 3](./images/Print_023.png)
 
-**Imagem sugerida:** Passo a passo visual: Grade vazia > Adicionando bloco > Nível pronto. (Placeholder: [Sequência de imagens do editor]. Peça confirmação para gerar imagens.)
+---
+
+![Imagem 4](./images/Print_024.png)
+
+---
+
+![Imagem 5](./images/Print_024.png)
 
 **Exercício 3:**
 - Crie um nível pequeno: Um chão, um personagem, uma porta.
@@ -70,9 +72,7 @@ Passos:
 3. Dê um nome simples, como "Meu Mundo".
 4. Busque níveis de outros: Use palavras como "fácil" ou "divertido".
 
-![Imagem 4](./images/Print_024.png)
-
-**Imagem sugerida:** Tela de compartilhamento com botão "Enviar" e lista de níveis. (Placeholder: [Imagem da tela de compartilhar]. Confirme para imagens geradas.)
+![Imagem 4](./images/Print_026.png)
 
 **Exercício 4:**
 - Envie um nível seu.
@@ -90,5 +90,6 @@ Passos:
 - Com o tutor: Jogue juntos em modo multiplayer (até 4 amigos).
 
 **Fim da cartilha! Parabéns! Você é um criador de jogos. Pratique todo dia. Se precisar de ajuda, pergunte ao tutor.**
+
 
 **Para o tutor:** Monitore o progresso. Adapte exercícios se o aluno precisar de mais repetição. Use recompensas como stickers. Se quiser mais páginas ou ajustes, diga! Para as imagens, confirme se deseja que eu gere visuais personalizados baseados nessas descrições.
