@@ -12,6 +12,8 @@
 #### Parte 1: O que é o Epic Game Maker?
 Epic Game Maker é um app grátis no celular. Você cria mundos 2D com blocos, personagens e monstros. Como brincar de Lego, mas no jogo!
 
+![Imagem 1](./images/Print_021.png)
+
 **Imagem sugerida:** Uma tela do jogo com blocos coloridos e um personagem pulando. (Placeholder: [Imagem de blocos e personagem]. Se você quiser que eu gere imagens personalizadas para esta cartilha, por favor confirme para prosseguir com a criação visual.)
 
 **Exercício 1:** 
@@ -29,6 +31,8 @@ Passos:
 3. Escolha um nível da lista.
 4. Use o lado esquerdo da tela para andar.
 5. Use o lado direito para pular e atacar.
+
+![Imagem 2](./images/Print_022.png)
 
 **Imagem sugerida:** Captura de tela mostrando os controles: seta esquerda/direita, botão de pulo e ataque. (Placeholder: [Imagem dos controles no celular]. Confirme se deseja geração de imagens.)
 
@@ -48,6 +52,8 @@ Passos:
 5. Adicione itens: chave, porta.
 6. Clique em "Salvar" e teste.
 
+![Imagem 3](./images/Print_023.png)
+
 **Imagem sugerida:** Passo a passo visual: Grade vazia > Adicionando bloco > Nível pronto. (Placeholder: [Sequência de imagens do editor]. Peça confirmação para gerar imagens.)
 
 **Exercício 3:**
@@ -63,6 +69,8 @@ Passos:
 2. Clique em "Enviar para servidor".
 3. Dê um nome simples, como "Meu Mundo".
 4. Busque níveis de outros: Use palavras como "fácil" ou "divertido".
+
+![Imagem 4](./images/Print_024.png)
 
 **Imagem sugerida:** Tela de compartilhamento com botão "Enviar" e lista de níveis. (Placeholder: [Imagem da tela de compartilhar]. Confirme para imagens geradas.)
 
