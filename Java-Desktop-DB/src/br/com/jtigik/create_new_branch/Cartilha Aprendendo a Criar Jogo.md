@@ -56,7 +56,7 @@ Passos:
 
 ---
 
-![Imagem 5](./images/Print_024.png)
+![Imagem 5](./images/Print_025.png)
 
 **Exercício 3:**
 - Crie um nível pequeno: Um chão, um personagem, uma porta.
@@ -93,3 +93,4 @@ Passos:
 
 
 **Para o tutor:** Monitore o progresso. Adapte exercícios se o aluno precisar de mais repetição. Use recompensas como stickers. Se quiser mais páginas ou ajustes, diga! Para as imagens, confirme se deseja que eu gere visuais personalizados baseados nessas descrições.
+
